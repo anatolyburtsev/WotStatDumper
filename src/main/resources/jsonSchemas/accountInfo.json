@@ -1,0 +1,32 @@
+{
+  "statistics": {
+    "all": {
+      "spotted": "integer",
+      "max_frags_tank_id": "integer",
+      "hits": "integer",
+      "frags": "integer",
+      "max_xp": "integer",
+      "max_xp_tank_id": "integer",
+      "wins": "integer",
+      "losses": "integer",
+      "capture_points": "integer",
+      "battles": "integer",
+      "damage_dealt": "integer",
+      "damage_received": "integer",
+      "max_frags": "integer",
+      "shots": "integer",
+      "frags8p": "integer",
+      "xp": "integer",
+      "win_and_survived": "integer",
+      "survived_battles": "integer",
+      "dropped_capture_points": "integer"
+    },
+    "frags": "integer"
+  },
+  "account_id": "integer",
+  "created_at": "integer",
+  "updated_at": "integer",
+  "private": "integer",
+  "last_battle_time": "integer",
+  "nickname": "string"
+}
