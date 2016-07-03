@@ -20,7 +20,7 @@ public class Main {
         BlockingQueue<Integer>  queue = new ArrayBlockingQueue<Integer>(20);
         BlockingQueue<Integer>  queue2Repeat = new ArrayBlockingQueue<Integer>(1000);
         Producer                producer = new Producer(0, 100_000_000, 100, queue);
-        int                     processCount = 40;
+        int                     processCount = 20;
         Thread                  threadProducer = new Thread(producer);
         ExecutorService         executor = Executors.newFixedThreadPool(processCount);
         String                  tempDBName = "wotbTemp";
@@ -36,7 +36,7 @@ public class Main {
             LOG.info("start thread № " + i);
             consumer = new Consumer(queue, tempDBName + i + ".db", 100);
             executor.execute(consumer);
-            Thread.sleep(100);
+            Thread.sleep(1000);
         }
 
         threadInformer.start();
@@ -62,6 +62,7 @@ public class Main {
             Thread.sleep(100);
 
         }
+        Init.init();
 
         // merge
 //        LOG.info("Start merging DBs");
