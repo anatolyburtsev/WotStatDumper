@@ -53,7 +53,7 @@ public class Consumer implements Runnable {
         } catch (InterruptedException e) {
             // finish
             dbManager.close();
-            e.printStackTrace();
+//            e.printStackTrace();
         } catch (IOException e) {
             dbManager.close();
             e.printStackTrace();

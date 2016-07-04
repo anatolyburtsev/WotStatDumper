@@ -8,8 +8,8 @@ import java.util.concurrent.BlockingQueue;
 public class Producer implements Runnable {
     private Integer                     startId;
     private Integer                     finishId;
-    private Integer                     currentId;
     private Integer                     step;
+    private static volatile Integer     currentId;
 
     public Producer(Integer startId, Integer finishId, Integer step, BlockingQueue<Integer> queue) {
         this.startId = startId;
@@ -20,7 +20,7 @@ public class Producer implements Runnable {
 
     private BlockingQueue<Integer>      queue;
 
-    public Integer getCurrentId() {
+    public static Integer getCurrentId() {
         return currentId;
     }
 

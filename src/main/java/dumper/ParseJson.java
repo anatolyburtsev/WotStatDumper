@@ -39,9 +39,9 @@ public class ParseJson {
     public List<AccountInfo> parseBigJson(JsonObject jsonObject, int[] ids) throws RequestBadStatusException, JSONException {
         if (! jsonObject.get("status").getAsString().equals("ok")) {
             System.err.println(jsonObject);
-            Main.LOG.error("Failed with id: " + ids[0]);
-            Main.queue2Repeat.offer(ids[0]);
-            Main.failedCounter++;
+            QueueMaster.LOG.error("Failed with id: " + ids[0]);
+//            Main.queue2Repeat.offer(ids[0]);
+//            Main.failedCounter++;
             throw new RequestBadStatusException();
         }
 
